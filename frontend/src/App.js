@@ -380,13 +380,14 @@ const GlobalSearch = ({ onResults }) => {
 // Floating Action Buttons
 const FloatingActionButtons = ({ onRefresh }) => {
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
+    <div className="fixed bottom-6 right-6 flex flex-col space-y-3" style={{ zIndex: 10000 }}>
       <ActorDialog
         onSuccess={onRefresh}
         trigger={
           <Button 
             size="lg" 
-            className="rounded-full w-14 h-14 bg-purple-600 hover:bg-purple-700 shadow-lg hover:shadow-xl transition-all duration-200"
+            className="rounded-full w-14 h-14 bg-purple-600 hover:bg-purple-700 shadow-lg hover:shadow-xl transition-all duration-200 floating-button"
+            style={{ zIndex: 10001 }}
           >
             <User className="h-6 w-6" />
           </Button>
@@ -397,7 +398,8 @@ const FloatingActionButtons = ({ onRefresh }) => {
         trigger={
           <Button 
             size="lg" 
-            className="rounded-full w-14 h-14 bg-pink-600 hover:bg-pink-700 shadow-lg hover:shadow-xl transition-all duration-200"
+            className="rounded-full w-14 h-14 bg-pink-600 hover:bg-pink-700 shadow-lg hover:shadow-xl transition-all duration-200 floating-button"
+            style={{ zIndex: 10001 }}
           >
             <Film className="h-6 w-6" />
           </Button>
