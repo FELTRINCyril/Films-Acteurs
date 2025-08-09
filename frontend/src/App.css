@@ -65,6 +65,8 @@
 /* Floating action buttons animation */
 .floating-button {
   animation: float 6s ease-in-out infinite;
+  z-index: 9999 !important;
+  position: relative;
 }
 
 .floating-button:nth-child(1) {
